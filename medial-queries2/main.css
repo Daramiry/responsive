@@ -1,3 +1,85 @@
+* {
+  border: 1px solid mediumvioletred;
+  box-sizing: border-box;
+}
+
+ */
 body {
   background: papayawhip;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 2em;
+  
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-grow: 3;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.a, .f, aside, .wrapper  {
+  flex-grow: 1;
+  max-height: 10vh;
+  margin: .5em;
+  
+}
+
+.a, .f {
+  background-color: rgb(147, 152, 221);
+  border: 5px solid chartreuse;
+}
+
+aside  {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  min-height: 20vh;
+
+}
+
+aside > div {
+  flex-grow: 10;
+  margin: .5em;
+  background-color: rgb(147, 152, 221);
+  border: 5px solid chartreuse;
+}
+
+.b {
+  width: 90%;
+  flex-grow: 3;
+  margin: .5em;
+  background-color: rgb(147, 152, 221);
+  border: 5px solid chartreuse;
+}
+
+@media (min-width: 600px) {
+  .container {
+    flex-flow: row wrap;
+  }
+
+  .a {
+    width: 100%;
+    max-height: 10vh;
+  }
+  .wrapper {
+    flex-basis: 70%;
+    min-height:  80vh;
+  }
+  .f {
+    margin: .5em;
+    flex-grow: 3;
+    min-height:  80vh;
+  }
 }
